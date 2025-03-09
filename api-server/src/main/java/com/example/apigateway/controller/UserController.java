@@ -45,7 +45,6 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-
     public void deleteUser(@PathVariable Long id) {
         String url =  coreServiceUrl +"/"+ id;  // Формируем URL для Core сервиса
         restTemplate.exchange(url, HttpMethod.DELETE, null, Void.class);
